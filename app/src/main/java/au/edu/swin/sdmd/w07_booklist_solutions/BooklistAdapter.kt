@@ -8,7 +8,7 @@ import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class BooklistAdapter(): RecyclerView.Adapter<BooklistAdapter.ViewHolder>() {
+class BooklistAdapter: RecyclerView.Adapter<BooklistAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -20,7 +20,7 @@ class BooklistAdapter(): RecyclerView.Adapter<BooklistAdapter.ViewHolder>() {
     override fun getItemCount(): Int = BookStore.count
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = BookStore.books.get(position)
+        val item = BookStore.books[position]
         holder.bind(item)
     }
 
